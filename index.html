@@ -1,21 +1,108 @@
-<h2 style="color: blue; padding-left: 170px;">Ninja Training</h2>
-<br>                                                                  <!-- HealthBar-->
-<style>                                                                
-    #progress-holder{width:700px;height:20px;background:grey}
-    #progress{width:0;height:100%;background:black}
+
+<style> 
+    @font-face {
+        font-family: got;
+        src: url(got.ttf);
+    }                                                               
+    #progress-holder{
+        width:700px;
+        height:20px;
+        background: #26C6DA
+        }
+    #progress{
+        width:0;
+        height:100%;
+        background: #01579B;
+        }
+    #buttons{
+            background-color: #B2EBF2;
+            width: 700px;
+            height: auto;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+
+    .button{
+        background-color:#40C4FF;
+	    border-radius:28px;
+	    border:1px solid #40C4FF;
+	    display:inline-block;
+	    cursor:pointer;
+	    color:#ffffff;
+	    font-family:Arial;
+	    font-size:17px;
+	    padding:16px 31px;
+	    text-decoration:none;
+        letter-spacing: 0.15rem;
+
+    }
+
+
+
+    #movement{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    #actions{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 10px;
+    }
+
+    #health{
+        color: aliceblue;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    body{
+        background-color: #B2EBF2;
+
+    }
+
+    .text{
+        color: #00838F;
+    }
+
+      #heading{
+        padding-left: 170px;
+        margin:10px;
+        font-family: got;
+        font-size: 50px;
+    } 
+
 </style>
+
+
+<body>
+<header>
+<h2 id="heading" class="text">Ninja Training</h2>
+</header>
+<br>                                                                  
 <div id="progress-holder">
-    <div id="progress"></div>
+                                             <!--Healthbar-->
+    <div id="progress">
+    </div>
 </div>
+<div id="canvas">
+<canvas id="my-canvas" width="700" height="500"></canvas>               <!-- Canavs-->
+</div>              
 <br>
-<canvas id="my-canvas" width="700" height="700"></canvas>               <!-- Canavs-->
-<br><br>
+<div id="buttons">                                                      <!--Buttons-->
+    <diV id="movement">
+        <button id="backward" class="button">Backward (&larr;)</button>
+        <button id="forward" class="button">Forward (&rarr;)</button>                                  
+    </diV>
+    <div id="actions">
+        <button id="block" class="button">Block (space)</button>
+        <button id="kick"class="button">Kick (&darr;)</button>
+        <button id="punch" class="button">Punch (&uarr;)</button>
+    </div>
 
-<button id="forward">Forward</button>                                   <!--Buttons-->
-<button id="backward">Backward</button><br>
-<button id="block">Block</button>
-<button id="kick">Kick</button>
-<button id="punch">Punch</button>
-<br>
-
+</div>
+</body>
 <script type ="text/javascript" src="game.js"></script>
